@@ -2,8 +2,11 @@
 $(document).ready(function() {
     // Allow the entire page to load
     $(window).on("load", function() {
-    // Create variables
-    
+    // Create variables for random (goal) number, total wins, total losses
+    var randoNum;
+    var wins;
+    var losses;
+
 
 // Welcome to the Crystal Kingdom! - gameplay pseudocode
 
