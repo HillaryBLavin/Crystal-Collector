@@ -12,6 +12,7 @@ $(document).ready(function() {
 
     // Display 4 crystals on the page (functional as buttons)
 
+
     // At start of New Game:
         // Display random number between 19 - 200
         // Assign random hidden numerical value to each crystal between 1 - 12
