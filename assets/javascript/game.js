@@ -1,20 +1,36 @@
-// Welcome to the Crystal Kingdom!
+// Allow dat DOM to load
+$(document).ready(function() {
+    // Allow the entire page to load
+    $(window).on("load", function() {
+    // Create variables
+    
 
-// Display 4 crystals on the page (functional as buttons)
+// Welcome to the Crystal Kingdom! - gameplay pseudocode
 
-// At start of New Game:
-    // Display random number between 19 - 200
-    // Assign random hidden numerical value to each crystal between 1 - 12
-    // Hide player's total score until they click a crystal
+    // Display 4 crystals on the page (functional as buttons)
 
-// When player clicks a crystal, it will add the assigned numerical value of the crystal to the player's total
+    // At start of New Game:
+        // Display random number between 19 - 200
+        // Assign random hidden numerical value to each crystal between 1 - 12
+        // Hide player's total score until they click a crystal
 
-// Player wins if they match random number exactly
+    // When player clicks a crystal, it will add the assigned numerical value of the crystal to the player's total
 
-// Player loses if they go over random number
+    // Player wins if they match random number exactly
 
-// Game restarts when player wins or loses and appropriate counter increments
+    // Player loses if they go over random number
 
-// Wins Counter
+    // Game restarts when player wins or loses and appropriate counter increments
 
-// Losses Counter
+    // Wins Counter
+
+    // Losses Counter
+
+
+
+
+
+    })
+
+});
+
