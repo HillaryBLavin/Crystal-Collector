@@ -8,8 +8,8 @@ $(document).ready(function() {
 
 // Welcome to the Crystal Kingdom! - gameplay pseudocode
 
-// At start of New Game:
-    // Display random number between 19 - 200
+
+// Display random number between 19 - 200
 
 // Assign random hidden numerical value to each crystal between 1 - 12
 
