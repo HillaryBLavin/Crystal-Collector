@@ -1,9 +1,18 @@
 // Allow dat DOM to load
 $(document).ready(function() {
-    // Create variables for random (goal) number, total wins, total losses
-    var randoNum;
-    var wins;
-    var losses;
+    // Create array to hold images
+    crystals = ['assets/images/rose.png','assets/images/pearl.png','assets/images/garnet.png', 'assets/images/amethyst.png'];
+    // Create variables for current power level, total wins, total losses
+    var counter = 0;
+    var wins = 0;
+    var losses = 0;
+    // Write the values (wins or losses) to the appropriate HTML elements
+    $('#win').text(wins);
+    $('#lose').text(losses);
+    
+    // Run the game (call the functions)
+    setCrystals();
+    newGame();
 
 
 // Welcome to the Crystal Kingdom! - gameplay pseudocode
