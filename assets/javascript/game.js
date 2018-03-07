@@ -1,7 +1,5 @@
 // Allow dat DOM to load
 $(document).ready(function() {
-    // Allow the entire page to load
-    $(window).on("load", function() {
     // Create variables for random (goal) number, total wins, total losses
     var randoNum;
     var wins;
@@ -17,7 +15,7 @@ $(document).ready(function() {
         var random = Math.floor((Math.random() * 12) + 1);
         console.log(random);
 
-        $(".crystal-gem").attr("data-crystalvalue")
+        $(".crystal-gem").attr("data-crystalvalue", random[i]);
     }
 
     // Hide player's total score until they click a crystal
@@ -38,7 +36,7 @@ $(document).ready(function() {
 
 
 
-    })
+
 
 });
 
