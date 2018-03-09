@@ -12,7 +12,7 @@ $(document).ready(function() {
     
     // Run the game (call the functions)
     setCrystals();
-    // newGame();
+    newGame();
 
     // Dynamically create four crystals with random hidden numerical values between 1 - 12 using a function called setCrystals
     function setCrystals() {
@@ -84,7 +84,7 @@ $(document).ready(function() {
                 $('#win').text(wins);
                 // Reset crystals
                 $('#crystals').empty();
-                newCrystals();
+                setCrystals();
                 // Start New Game
                 newGame();
             } 
@@ -96,7 +96,7 @@ $(document).ready(function() {
                 $('#lose').text(losses);
                 // Reset crystals
                 $('#crystals').empty();
-                newCrystals();
+                setCrystals();
                 // Start New Game
                 newGame();
             }
