@@ -55,33 +55,53 @@ $(document).ready(function() {
         // Reset Current Power Level (counter) to zero using the current-power ID
         counter = 0;
         $('#current-power').text(counter);
+
+        // Write function for pulling random number between 19 - 200
+        function randoNumFromInt(min,max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        };
+
+        // Create variable to hold the randomly pulled number
+        var numberToMatch = randoNumFromInt(19,200);
+
+        // Grab the power-level ID and use numberToMatch to fill in text
+        $('#power-level').text(numberToMatch);
+
+        // Create on-click function for crystalImage class
+        $('.crystalImage').on('click', function() {
+            // Update the Current Power Level with the random number generated for that particular image (parseInt returns first number in a string, the string being the data-num attribute from "this" which is the .crystalImage)
+            counter = counter + parseInt($(this).data('num'));
+
+            // Update Current Power Level with new value of counter
+            $('#current-power').text(counter);
+            
+            // Use if-else statement for win/loss scenarios
+            if (counter == numberToMatch) {
+                // Change status to win 
+                $('#status').text('You Won!!!');
+                // Increment win counter
+                wins++;
+                $('#win').text(wins);
+                // Reset crystals
+                $('#crystals').empty();
+                newCrystals();
+                // Start New Game
+                newGame();
+            } 
+            else if (counter > numberToMatch) {
+                // Change status to lose
+                $('#status').text('Oh No! You Lost!');
+                // Increment loss counter
+                losses++;
+                $('#lose').text(losses);
+                // Reset crystals
+                $('#crystals').empty();
+                newCrystals();
+                // Start New Game
+                newGame();
+            }
+        });
     }
-// Welcome to the Crystal Kingdom! - gameplay pseudocode
- 
-
-// Display random number between 19 - 200
-
-
-
-// Hide player's total score until they click a crystal
-
-// When player clicks a crystal, it will add the assigned numerical value of the crystal to the player's total
-
-// Player wins if they match random number exactly
-
-// Player loses if they go over random number
-
-// Game restarts when player wins or loses and appropriate counter increments
-
-// Wins Counter
-
-// Losses Counter
-
-
-
-
-
-
 
 });
 
